@@ -4,3 +4,31 @@
 // 
 
 // Add extra styles here
+
+
+.dfe-back-to-top {
+    margin-bottom: 4rem;
+}
+.dfe-back-to-top__icon {
+    display: inline-block;
+    width: 0.8em;
+    height: 1em;
+    margin-top: -5px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.gem-c-contents-list__list-item--dashed {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 7.5px;
+}
+
+.gem-c-contents-list__list-item--dashed:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    overflow: hidden;
+}
