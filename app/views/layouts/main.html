@@ -4,3 +4,13 @@ https://prototype-kit.service.gov.uk/docs/layouts
 #}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
