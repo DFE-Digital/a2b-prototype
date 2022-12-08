@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to become an Academy
+{% endblock %}
+
+
+{% block beforeContent %} 
+<!--
+
+-->
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Conversion key details</span>
+        Conversion target date
+      </h1>
+
+      <h2 class="govuk-heading-s">Do you want the conversion to happen on a particular month?</h2>
+      <div class="govuk-inset-text">
+        A conversion usually takes around 6 months. It may take longer if the school is part of a private finance initiative (PFI) contract. <br> <br>
+        Conversions will happen on the first day of the month selected.
+      </div>
+
+
+      
+
+
+      {% set yesHtml %}
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 3 2007
+          </div>
+          <div class="govuk-date-input" id="passport-issued">
+           
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+     
+      {{ govukTextarea({
+        id: "yes-date",
+        name: "yes-date",
+        type: "date",
+        classes: "govuk-!-width-two-thirds",
+        label: {
+          text: "Explain why you want to convert on this month"
+        }
+        }) }}
+      {% endset -%}
+
+
+
+
+{{ govukRadios({
+  idPrefix: "date",
+  name: "date",
+  
+  items: [
+    {
+      value: "yes",
+      text: "Yes",
+      conditional: {
+        html: yesHtml
+      }
+    },
+    {
+      value: "no",
+      text: "No",
+      conditional: {
+        html: noHtml
+      }
+    }
+  ]
+}) }}
+
+
+{{ govukButton({
+  text: "Save and continue",
+  href: "/index.html"
+}) }}
+
+      
+    </div>
+
+
+    </div>
+  </div>
+{% endblock %}

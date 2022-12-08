@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to become an Academy
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            
+            {{ govukNotificationBanner({
+                text: 'This service will be unavailable between 8pm Friday 18 March and 8am Saturday 19 March due to maintenance work.'
+            }) }}
+
+          <h1 class="govuk-heading-xl">Apply to become an Academy</h1>
+
+          <p>Local authority maintained schools can apply to become an academy by: </p>
+            <ul class="govuk-list govuk-list--bullet govuk-body">
+                <li>joining an existing multi-academy trust</li>
+                <li>forming a new multi-academy trust with other schools</li>
+                <li>becoming a single academy trust</li>
+            </ul>
+          <p>You can invite the trust or other contributors to complete parts of this application, however the chair of governors – or the head teacher acting on their behalf – must complete the declaration on behalf of the school that is applying.</p>
+          <p>You can save your work and come back to it at any time. Ensure you save your work regularly. </p>
+          
+          <h2 class="govuk-heading-m">Before you start</h2>
+          
+            {{ govukDetails({
+                summaryText: "What you need to have ready to apply",
+                text: "We would advise you to contact your regional schools commissioner's office to discuss your plans before starting your application."
+            }) }}
+
+            {{ govukButton({
+                text: "Start now",
+                href: "banner2.html",
+                isStartButton: true
+            }) }}
+
+            {{ govukDetails({
+                summaryText: "Problems using this service?",
+                text: "Call the Department for Education on 0370 000 2288."
+            }) }}
+        </div>
+      </div>
+  
+    </main>
+  </div>
+
+  
+  {% endblock %}
+ 

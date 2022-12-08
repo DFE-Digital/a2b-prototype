@@ -1,0 +1,64 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Application complete - Apply to become an academy
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          {{ govukPanel({
+          titleText: "Application complete",
+          html: "Your reference number is<br><strong>A2B_0256</strong>"
+        }) }}
+      </h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <!--  <h2 class="govuk-heading-m"></h2>-->
+        <p class="govuk-body">A confirmation email has been sent to sphillips@email.edu</p>
+        <p class="govuk-body">
+          You should print out and keep <a href="#" class="govuk-link">a copy of your application</a> for your records. 
+        </p>
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+          It will take 2 to 6 weeks  to assess your application, but we may contact you sooner if we need more information.
+          <br><br>
+          <a href="#" class="govuk-link">Tell us what you thought of this service</a> (takes 30 seconds)
+        </p>
+        <h2 class="govuk-heading-m">Contact us</h2>
+        <p class="govuk-body"> 
+          You can email <a href="mailto:ServiceDelivery.RDD@education.gov.uk">ServiceDelivery.RDD@education.gov.uk</a> if you need to speak to us about your application.
+        </p>
+        
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Related content</h3>
+        <p class="govuk-body"><a href="#" class="govuk-link">Convert to an academy: guide for schools</a>
+        </p>
+      </div>
+    </div>
+
+  </main>
+</div>
+      
+  
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
