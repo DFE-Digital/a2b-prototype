@@ -18,17 +18,29 @@
     vertical-align: middle;
 }
 
-.gem-c-contents-list__list-item--dashed {
-    position: relative;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 7.5px;
+.dfe-c-print-link__button {
+    border: 1px solid #b1b4b6;
+    color: #1d70b8;
+    cursor: pointer;
+    margin: 0;
+    font-size: 1rem;
 }
 
-.gem-c-contents-list__list-item--dashed:before {
-    content: "—";
-    position: absolute;
-    left: 0;
-    width: 20px;
-    overflow: hidden;
+.dfe-c-print-link__button {
+    background: url(/public/icons/icon-print.png) no-repeat 10px 50%;
+    background-size: 16px 18px;
+    padding: 10px 10px 10px 36px;
+    text-decoration: none;
+    &:hover {
+        background-color: govuk-colour("light-grey");
+    }
+    &:focus {
+        outline: 3px solid transparent;
+        color: $govuk-link-active-colour;
+        background-color: $govuk-focus-colour;
+        box-shadow: 0 -2px $govuk-focus-colour, 0 4px #0b0c0c;
+        text-decoration: none;
+        background-color: $govuk-focus-colour;
+        border-color: transparent;
+    }
 }
