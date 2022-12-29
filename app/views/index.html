@@ -4,22 +4,68 @@
 Home – {{serviceName}} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+{% endblock %}
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Apply to become an academy prototype site</h1>
-    <p class="govuk-body-l">This is where the Department for Education Service Delivery Division (SDD) Apply to become an academy (A2B) service prototypes live.</p>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Apply to become an academy prototypes</h1>
+    <p class="govuk-body-l govuk-!-padding-bottom-7">This is where the Department for Education Service Delivery Division (SDD) Apply to become an academy (A2B) service prototypes live.</p>
     
-    <h2 class="govuk-heading-l">Sprint 16</h2>
-    <p><a href="/16/start">Single school application summary screen</a></p>
+    <article class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-padding-bottom-4">
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Sprint 18</h2>
+      <p class="govuk-body-s">29 Nov - 12 Dec 2022</p>
+      <h3 class="govuk-heading-m"><a href="/18/start">Printable single school application summary screen</a></h3>
+      <p>A printable summary screen available to the user once the application has been submitted.</p>
+   </article>
 
-    <h2 class="govuk-heading-l">Sprints 2 and 3</h2>
-    <p><a href="2">Apply to become an academy - Prototype review V1.1</a></p>
-    <p>Prototypes created in February and March 2022 to address accessibility and design issues.</p>
+    <article class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-padding-bottom-4">
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Sprint 17</h2>
+      <p class="govuk-body-s">15 Nov - 28 Nov 2022</p>
+      <h3 class="govuk-heading-m"><a href="/17/start">Single school application summary screen</a></h3>
+      <p>A summary screen that could be presented at the final stages of the application in order for users to review all the answers provided on the application.</p>
+      <p>To date, most design work has taken place in <a href="https://www.figma.com/file/xqCVptyOcxauUXNum87EBG/A2B-v2.0?node-id=1990%3A31956&t=TcyWOvl303pmXJoX-1">Figma</a>. We decided to move to the Prototype Kit here due to the quantity of text needed.</p>
+    </article>
+
+    <article class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-padding-bottom-4">
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Sprints 2 and 3</h2>
+      <p class="govuk-body-s">Feb - Mar 2022</p>
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-2"><a href="2">Apply to become an academy - Prototype review V1.1</a></h3>
+      <p>Earily prototypes created to address accessibility and design issues.</p>
+    </article>
 
   </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="https://design-histories.education.gov.uk/apply-to-become">
+                Design history
+              </a>
+            </li>
+            <li>
+              <a href="https://www.figma.com/file/xqCVptyOcxauUXNum87EBG/A2B-v2.0?node-id=1990%3A31956&t=TcyWOvl303pmXJoX-1">
+                Figma design file
+              </a>
+            </li>
+            <li>
+              <a href="https://dfe-gov-uk.visualstudio.com/Academies-and-Free-Schools-SIP/_wiki/wikis/Academies-and-Free-Schools-SIP.wiki/2788/Apply-to-become-an-academy">
+                Project wiki
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+  </div>
+
 </div>
+
 
 {% endblock %}

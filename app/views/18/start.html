@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Application complete – {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Application complete
+      </h1>
+      <div class="govuk-panel__body">
+        Your reference number<br><strong>HDJ2123F</strong>
+      </div>
+    </div>
+
+    <p>A confirmation email has been sent to youremail@school.co.uk</p>
+    <p>You should print out and keep <a href="print">a copy of your application</a> for your records.</p>
+    <h2 class="govuk-heading-l">What happens next</h2>
+    <p>It will take 2 to 6 weeks to assess your application, but we may contact you sooner if we need more information.</p>
+    <p><a href="#">Tell us what you thought of this service</a> (takes 30 seconds)</p>
+    <h2 class="govuk-heading-l">Contact us</h2>
+    <p>You can email <a href="#">RegionalServices.RG@education.gov.uk</a> if you need to speak to us about your application.</p>
+  
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related content
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Convert to an academy guide for schools
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+  </div>
+</div>
+
+
+{% endblock %}
