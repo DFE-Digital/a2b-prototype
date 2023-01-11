@@ -4,62 +4,60 @@
   Help with your application
 {% endblock %}
 
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
-{% endblock %}
-
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
+    <form class="form" action="help-thanks" method="post">
     <div class="govuk-form-group">
-      <h1 class="govuk-label--l">
+      <h1 class="govuk-heading-l">
         Help with your application
       </h1>
 
       <br>
       <div class="govuk-form-group">
         <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="name">
             What is your name?
+          </label> 
         </h2>
         <div id="account-number-hint" class="govuk-hint">
           We will use your name when we contact you.
         </div>
-        <input class="govuk-input govuk-input--width-10" id="name" name="name" type="text" spellcheck="false" aria-describedby="name">
+        <input class="govuk-input govuk-input--width-20" id="name" name="name" type="text" spellcheck="false" aria-describedby="name">
       </div>
 
 
       <div class="govuk-form-group"></div>
         <h2 class="govuk-label-wrapper">
-            What is your email address?
+            <label class="govuk-label govuk-label--m" for="email">
+              What is your email address?
+            </label>
         </h2>
         <div id="account-number-hint" class="govuk-hint">
           We will use this to contact you about the problem. Make sure you enter it correctly.
         </div>
-        <input class="govuk-input govuk-input--width-10" id="email" name="email" type="text" spellcheck="false" aria-describedby="email">
+        <input class="govuk-input govuk-input--width-20" id="email" name="email" type="text" spellcheck="false" aria-describedby="email">
       </div>
 
 
+     <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
       <div class="govuk-form-group">
-        <h2 class="govuk-label-wrapper">
-          What do you need help with?
+        <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="with-hint">
+            What do you need help with?
+          </label>
         </h2>
         <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
-        </div>
-           <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-            You can enter up to 200 characters
-            </div>
-        </div>
+      </div>
+      <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+        You can enter up to 200 characters
+      </div>
     </div>
-    
-    <br>
     
     <button class="govuk-button" data-module="govuk-button">
       Submit details
     </button>
-
+    </form>
   </div>
 </div>
 
