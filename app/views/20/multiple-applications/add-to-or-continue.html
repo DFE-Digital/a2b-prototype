@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "dfe-sign-in",
+      text: "Sign out",
+      active: true
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="../feedback/start">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+            Add to, or continue an application
+        </h1>
+
+        <form class="form" method="post">
+
+            {% from "govuk/components/radios/macro.njk" import govukRadios %}
+                {{ govukRadios({
+                name: "add-to-or-continue-an-application",
+                items: [
+                    {
+                    value: "join-an-academy",
+                    text: "Join an academy",
+                    hint: {
+                        text: "Wise Owl Primary School"
+                    }
+                    },
+                    {
+                    value: "form-an-academy",
+                    text: "Form an academy",
+                    hint: {
+                        text: "Including: Seymour Road Primary School, Oak Park Primary School, Montgomery Academy"
+                    }
+                    },
+                    {
+                    divider: "or"
+                    },
+                    {
+                    value: "start-a-new-application",
+                    text: "Start a new application"
+                    }
+                ]
+                }) 
+            }}
+
+            
+            {{ govukButton({
+            text: "Continue"
+            }) }}
+
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}
