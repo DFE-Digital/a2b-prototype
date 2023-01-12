@@ -1,7 +1,19 @@
 {% extends "layouts/main.html" %}
 
-{% block pageTitle %}
-  Task list template – {{ serviceName }} – GOV.UK Prototype Kit
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "dfe-sign-in",
+      text: "Sign out",
+      active: true
+    }
+  ]
+}) }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -58,7 +70,7 @@
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">Susan Humperdinck</td>
-                <td class="govuk-table__cell">Chair of the governing body</td>
+                <td class="govuk-table__cell">Chair of the governing board</td>
                 <td class="govuk-table__cell"><a href="#">Change</a></td>
               </tr>
             </tbody>
@@ -84,7 +96,7 @@
                   Finances
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="finances">In progress</strong>
+              <strong class="govuk-tag app-task-list__tag" id="finances">Completed</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -92,7 +104,7 @@
                   Land and building
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="land-and-building">Not started</strong>
+              <strong class="govuk-tag app-task-list__tag" id="land-and-building">Completed</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -100,7 +112,7 @@
                   Local authority
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+              <strong class="govuk-tag app-task-list__tag" id="">Completed</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -108,7 +120,7 @@
                   Partnerships and affiliations
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+              <strong class="govuk-tag app-task-list__tag" id="">Completed</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -116,7 +128,7 @@
                   Performance and safeguarding
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+              <strong class="govuk-tag app-task-list__tag" id="">Completed</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -124,7 +136,7 @@
                   Pupil numbers
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+              <strong class="govuk-tag app-task-list__tag" id="">Completed</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -132,7 +144,7 @@
                   Religious education
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+              <strong class="govuk-tag app-task-list__tag" id="">Completed</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -140,7 +152,7 @@
                   Stakeholders
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+              <strong class="govuk-tag app-task-list__tag" id="">Completed</strong>
             </li>
           </ul>
         </li>
@@ -180,7 +192,7 @@
         </summary>
         <div class="govuk-details__text">
           <p>Any other schools that are applying will not be affected.</p>
-          <a href="are-you-sure-you-want-to-cancel" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          <a href="../cancel/are-you-sure-you-want-to-cancel" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Cancel application
           </a>
         </div>
