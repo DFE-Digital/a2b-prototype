@@ -32,14 +32,14 @@
     <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl">
-            Add to, or continue an application
+            Continue an application
         </h1>
 
         <form class="form" method="post">
 
             {% from "govuk/components/radios/macro.njk" import govukRadios %}
                 {{ govukRadios({
-                name: "add-to-or-continue-an-application",
+                name: "continue-an-application",
                 items: [
                     {
                     value: "join-an-academy",
