@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "dfe-sign-in",
+      text: "Sign out",
+      active: true
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+<a href="continue" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+  Form an academy trust
+</h1>
+
+<ol class="govuk-list govuk-!-margin-bottom-9">
+  <li>
+    <strong>Application reference:</strong> A2B_2211
+  </li>
+  <li>
+    <strong>Application owner:</strong> Eve Farmer <a href="#">change</a>
+  </li>
+</ol>
+
+  
+
+<ol class="app-task-list govuk-!-margin-bottom-9">
+
+  <li>
+    <h2 class="app-task-list__section">
+      <span class="app-task-list__section-number">1. </span> Give details of the schools
+    </h2>
+    <ul class="app-task-list__items govuk-!-margin-bottom-3">
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="oak-park-primary-school">
+            Oak Park Primary School
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="oak-park-primary-school">Not started</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="seymour-road-primary-school">
+            Seymour Road Primary School
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="seymour-road-primary-school">In progress</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="wise-owl-primary-school">
+            Wise Owl Primary School
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="wise-owl-primary-school">In progress</strong>
+      </li>
+    </ul>
+    <div class="govuk-button-group govuk-!-margin-bottom-9">
+        <a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" data-module="govuk-button">
+          Add a school
+        </a>
+        <a href="#" style="color: #0b0c0c">Remove a school</a>
+      </div>
+  </li>
+
+  <li>
+    <h2 class="app-task-list__section">
+      <span class="app-task-list__section-number">2. </span> Give details of the trust
+    </h2>
+    <ul class="app-task-list__items">
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="wise-owl-trust">
+            Wise Owl Trust
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="wise-owl-trust">In progress</strong>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <h2 class="app-task-list__section">
+      <span class="app-task-list__section-number">3. </span> Submit application
+    </h2>
+    <p>You will be able to submit this application once steps 1 and 2 are complete.</p>
+  </li>
+
+</ol>
+
+
+{% endblock %}

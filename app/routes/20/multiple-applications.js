@@ -6,12 +6,12 @@ module.exports = function (router) {
     
     var continueApplication = req.session.data["continue-an-application"];
 
-    if (continueApplication == "join-an-academy") {
-        res.redirect("/20/multiple-applications/application-overview");
-    } else if (continueApplication == "") {
-        res.redirect("/20/multiple-applications/continue");
+    if (continueApplication == "join-an-academy-trust") {
+        res.redirect("/20/multiple-applications/single-school-overview");
+    } else if (continueApplication == "form-an-academy-trust") {
+        res.redirect("/20/multiple-applications/multi-school-overview");
     } else {
-        res.redirect("/20/multiple-applications/continue")
+        res.redirect("/20/multiple-applications/what-are-you-applying-to-do")
     }
 
     });
