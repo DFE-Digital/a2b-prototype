@@ -9,3 +9,6 @@ const router = govukPrototypeKit.requests.setupRouter();
 
 require("./routes/20/feedback.js")(router);
 require("./routes/20/multiple-applications.js")(router);
+
+require("./routes/22/create-an-application-v1.js")(router);
+require("./routes/22/create-an-application-v2.js")(router);

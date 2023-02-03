@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+<a href="#" onclick="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+  <span class="govuk-caption-l">Application to join a trust </span>
+  Wise Owl Trust
+</h1>
+
+<ol class="govuk-list govuk-!-margin-bottom-9">
+  <li>
+    <strong>Application reference:</strong> A2B_JAM_2211
+  </li>
+  <li>
+    <strong>Application owner:</strong> Eve Farmer <a href="#">change</a>
+  </li>
+</ol>
+
+  
+
+<ol class="app-task-list govuk-!-margin-bottom-9">
+
+  <li>
+    <h2 class="app-task-list__section">
+      <span class="app-task-list__section-number">1. </span> Give the name of the trust
+    </h2>
+    <ul class="app-task-list__items">
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="wise-owl-trust">
+            Wise Owl Trust
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--default app-task-list__tag" id="wise-owl-trust">Completed</strong>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <h2 class="app-task-list__section">
+      <span class="app-task-list__section-number">2. </span> Give details of the schools
+    </h2>
+    <p>Add schools and invite school staff to apply to join Wise Owl Trust.</p>
+    {% if data['add-to-jam'] %}
+    <ul class="app-task-list__items govuk-!-margin-bottom-3">
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="oak-park-primary-school">
+            Montgomery Primary School
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="oak-park-primary-school">Submitted</strong>
+      </li>
+      <!--
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="seymour-road-primary-school">
+            Seymour Road Primary School
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="seymour-road-primary-school">In progress</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="wise-owl-primary-school">
+            Wise Owl Primary School
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="wise-owl-primary-school">In progress</strong>
+      </li>
+      -->
+    </ul>
+    {% endif %}
+    <div class="govuk-button-group govuk-!-margin-bottom-9">
+        <a href="add/what-is-the-name-of-the-school" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" data-module="govuk-button">
+          Add a school
+        </a>
+        {% if data['add-to-jam'] %}
+        <a href="#" style="color: #0b0c0c">Remove a school</a>
+        {% endif %}
+      </div>
+  </li>
+
+</ol>
+
+
+{% endblock %}

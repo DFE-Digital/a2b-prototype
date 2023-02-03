@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+<a href="#" onclick="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      {new} Who would you like to invite to complete the school's application?
+    </h1>
+    <form action="" method="post" novalidate>
+      
+      {{ govukInput({
+        label: {
+          text: "Email",
+          classes: "govuk-label--s",
+          isPageHeading: false
+        },
+        id: "contributor-name",
+        name: "contributor-name",
+        value: "bob.jones@montgomery.uk"
+      }) }}
+  
+       <a href="what-is-this-persons-role" class="govuk-button" data-module="govuk-button">Continue</a>
+
+    </form>
+  </div>
+</div>
+{% endblock %}

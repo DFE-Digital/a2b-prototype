@@ -1,0 +1,234 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+{% if data["are-you-applying-to-convert-more-than-one-school"] == 'yes' or data['are-you-creating-more-than-one-application'] == 'yes' %}
+<a href="#" onclick="javascript:window.history.back();" class="govuk-back-link">Your applications</a>
+{% else %}
+<a href="#" onclick="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+  <span class="govuk-caption-l">Join an academy trust</span>
+  Wise Owl Primary School
+</h1>
+
+<ol class="govuk-list govuk-!-margin-bottom-9">
+  <li>
+    <strong>School URN:</strong> 12345
+  </li>
+  <li>
+    <strong>Trust:</strong> Wise Owl Trust <a href="#">Change</a>
+  </li>
+  <li>
+    <strong>Application reference:</strong> {% if data['add-a-school'] == 'add-a-school' %}A2B_JAM_2211_01{% else %}1234_01{% endif %}
+  </li>
+</ol>
+
+
+       
+<div class="govuk-inset-text govuk-!-margin-bottom-9 govuk-!-width-two-thirds">
+  You can <a href="add-contributors">invite people to help you with this form</a>, but the following steps must be completed before it can be submitted.
+</div>
+
+<ol class="app-task-list">
+  <li>
+    <h2 class="app-task-list__section">
+      <span class="app-task-list__section-number">1. </span> Add your school's leaders
+    </h2>
+    <ul class="app-task-list__items govuk-!-margin-bottom-0">
+      {% if(data['what-is-your-role'] == 'headteacher') %}
+        <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="headteacher">Headteacher: Eve Farmer</a>
+        </span>
+        <strong class="govuk-tag govuk-tag--default app-task-list__tag" id="headteacher">Completed</strong>
+      </li>
+        <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="chair">
+            Chair of governors
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="finances">Not started</strong>
+      </li>
+      {% elif(data['what-is-your-role'] == 'chair-of-governors') %}
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="headteacher">
+              Headteacher
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="headteacher">Not started</strong>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="chair">
+              Chair of governors: Eve Farmer
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--default app-task-list__tag" id="finances">Completed</strong>
+        </li>
+      {% else %}
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="headteacher">
+              Headteacher
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="headteacher">Not started</strong>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="#" aria-describedby="chair">
+              Chair of governors
+            </a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="finances">Not started</strong>
+        </li>
+      {% endif %}
+    </ul>
+  </li>
+
+  <li>
+    <h2 class="app-task-list__section govuk-!-margin-top-9">
+      <span class="app-task-list__section-number">2. </span> Give your school's details
+    </h2>
+    <ul class="app-task-list__items">
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="becoming-an-academy">
+            Becoming an academy
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="becoming-an-academy">Not started</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="finances">
+            Finances
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="finances">Not started</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="land-and-building">
+            Land and building
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="land-and-building">Not started</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="">
+            Local authority
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="">
+            Partnerships and affiliations
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="">
+            Performance and safeguarding
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="">
+            Pupil numbers
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="">
+            Religious education
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+      </li>
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="#" aria-describedby="">
+            Stakeholders
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <h2 class="app-task-list__section">
+      <span class="app-task-list__section-number">3. </span> Governing body sign-off and completion
+    </h2>
+    <div class="govuk-inset-text govuk-!-margin-bottom-9 govuk-!-width-two-thirds">
+      This can only be done by the chair of the school’s governing body once the other sections are complete.
+    </div>
+  </li>
+
+</ol>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Cancel this application
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>Other schools that are applying will not be affected.</p>
+    <a href="../cancel/are-you-sure-you-want-to-cancel" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel application
+    </a>
+  </div>
+</details>
+
+<!--
+<div class="govuk-grid-column-one-third">
+
+<aside class="govuk-!-margin-left-4 govuk-!-margin-top-4">
+
+  <h2 class="govuk-heading-m">Recent activity</h2>
+  <p>Changes to the application by all contributors will appear here.</p>
+  <ul class="govuk-summary-list govuk-!-margin-bottom-4">
+    <li class="govuk-summary-list__row">
+      <h3 class="govuk-heading-s govuk-!-margin-top-4">1 Jan 2023, 9:33am</h3>
+      <div class="govuk-body">Eve Farmer created Wise Owl Primary School's application to join an academy trust</div>
+    </li>
+  </ul>
+  <a href="#">See the full change history</a>
+</aside>
+
+</div>-->
+
+
+{% endblock %}

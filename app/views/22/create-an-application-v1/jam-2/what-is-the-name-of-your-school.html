@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+<a href="#" onclick="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  What is the name of {% if (data['do-you-want-to-apply-to-convert-other-schools'] == 'no') or (data['do-you-want-to-apply-to-convert-other-schools'] == null) %}your{% else %}the{% endif %} school?
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="" method="post" novalidate>
+      
+      {{ govukInput({
+        label: {
+          text: "Search",
+          classes: "govuk-label--s",
+          isPageHeading: false
+        },
+        id: "school-name",
+        name: "school-name",
+        value: "Oak Park Primary School"
+      }) }}
+  
+       <a href="is-this-the-correct-school" class="govuk-button" data-module="govuk-button">Continue</a>
+
+    </form>
+  </div>
+</div>
+{% endblock %}
