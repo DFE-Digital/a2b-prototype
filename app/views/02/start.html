@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to become an Academy
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <p>Local authority maintained schools can apply to become an academy by:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>joining an existing multi-academy trust</li>
+        <li>forming a new multi-academy trust with other schools</li>
+        <li>becoming a single academy trust</li>
+      </ul>
+
+      <p>You will be able to invite other people to help, 
+        but the declaration section must be completed by the chair of governors 
+        or the school's headteacher acting on their behalf.</p>
+
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p>You should:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>contact your regional <a class="govuk-link" href="https://www.gov.uk/government/organisations/regional-schools-commissioners/about">schools commissioner's office</a> 
+          to discuss your plans</li>
+        <li>have <a class="govuk-link" href="/whatyouneed">the information and evidence you will need</a> to hand</li>
+      </ul>
+
+      <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+      
+    </div>
+<!--
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related content
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="https://www.gov.uk/guidance/convert-to-an-academy-information-for-schools">
+                Convert to an academy: guide for schools
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/government/collections/convert-to-an-academy-documents-for-schools">
+                Convert to an academy: documents for schools
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/government/publications/apply-to-become-a-multi-academy-trust">
+                Apply to become a multi-academy trust <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+-->
+
+  </div>
+{% endblock %}

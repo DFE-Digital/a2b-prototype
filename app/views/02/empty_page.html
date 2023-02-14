@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to become an Academy
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Add your page heading here
+      </h1>
+
+      <p>I've left the breadcrumbs in, but you can remove them or link them up if you need to.</p>
+       
+      <p>Here are some bullets:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>these are to save time</li>
+        <li>you can delete them</li>
+        <li>if you don't need them</li>
+      </ul>
+
+      <h2 class="govuk-heading-m" id="subsection-title">
+        And here's a H2
+      </h2>
+      <ol class="govuk-list govuk-list--number">
+        <li>here are some</li>
+        <li>numbered list items</li>
+        <li>if you need them</li>
+      </ol>
+    </div>
+  </div>
+{% endblock %}

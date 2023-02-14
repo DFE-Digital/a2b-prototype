@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Apply to become an Academy
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            
+            {{ govukNotificationBanner({
+                text: 'This service will be unavailable between 8pm Friday 18 March and 8am Saturday 19 March due to maintenance work.'
+            }) }}
+
+          <h1 class="govuk-heading-l">Your applications</h1>
+          {{ govukButton({
+            text: "Start new application"
+          }) }}
+          
+          <h2 class="govuk-heading-m">Applications in progress</h2>
+
+          <p class="govuk-body govuk-!-margin-bottom-0"> HARPENDEN ACADEMY TRUST application</p>
+          <p class="govuk-body-s govuk-!-margin-bottom-0">St George's School</p>
+          <a href="#" class="govuk-link">View application</a>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <!-- <h2 class="govuk-heading-m">Completed applications</h2> -->
+          
+        </div>
+      </div>
+  
+    </main>
+  </div>
+
+  
+  {% endblock %}
+ 
