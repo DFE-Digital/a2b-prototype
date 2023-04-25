@@ -4,17 +4,16 @@
   How satisfied are you with the service?
 {% endblock %}
 
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
+{% block beforeContent %}
+<a href="how-can-we-help" class="govuk-back-link">Back</a>
 {% endblock %}
-
 
 {% block content %}
 <div class="govuk-grid-row">
+  <form class="form" action="feedback-thanks" method="post">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading--l">How satisfied are you with the Apply to become an academy service?</h1>
+    <h1 class="govuk-heading-l">How satisfied are you with the Apply to become an academy service?</h1>
 
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
@@ -54,17 +53,18 @@
 
     </div>
 
-
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
       <div class="govuk-form-group">
         <h2 class="govuk-label--m">
           What improvements could we make?
         </h2>
         <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
         </div>
-           <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-            You can enter up to 200 characters
-            </div>
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 2000 characters
+          </div>
         </div>
+      </div>
     </div>
     
     <br>
@@ -74,6 +74,7 @@
     </button>
 
   </div>
+  </form>
 </div>
 
 

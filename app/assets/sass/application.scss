@@ -44,3 +44,20 @@
         border-color: transparent;
     }
 }
+
+
+@media (min-width: 40.0625em) {
+    .app-task-list__items {
+        padding-left: 0;
+    }
+}
+
+.a2b-table--border-top {
+    border-top: 1px solid #b1b4b6;
+}
+
+.a2b-hl {
+    background-color: #ffdd00;
+}
+
+@import "20/navigation";

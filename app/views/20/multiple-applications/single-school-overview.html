@@ -1,0 +1,231 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "dfe-sign-in",
+      text: "Sign out",
+      active: true
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+<a href="continue" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+  <span class="govuk-caption-l">Join an academy trust</span>
+  Wise Owl Primary School
+</h1>
+
+<ol class="govuk-list govuk-!-margin-bottom-9">
+  <li>
+    <strong>School URN:</strong> 15233
+  </li>
+  <li>
+    <strong>Trust:</strong> Wise Owl Trust
+  </li>
+  <li>
+    <strong>Application reference:</strong> 1234_01
+  </li>
+</ol>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       
+      <div class="govuk-inset-text govuk-!-margin-bottom-9">
+        You can <a href="#">invite people to help you with this form</a>, but the following steps must be completed before it can be submitted.
+      </div>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Add your school's leaders
+          </h2>
+          <table class="govuk-table a2b-table--border-top govuk-!-margin-bottom-9">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Joe Bloggs</td>
+                <td class="govuk-table__cell">Headteacher</td>
+                <td class="govuk-table__cell"><a href="#">Change</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Susan Humperdinck</td>
+                <td class="govuk-table__cell">Chair of the governing board</td>
+                <td class="govuk-table__cell"><a href="#">Change</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Give your school's details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="becoming-an-academy">
+                  Becoming an academy
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="becoming-an-academy">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="finances">
+                  Finances
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="finances">In progress</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="land-and-building">
+                  Land and building
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="land-and-building">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="">
+                  Local authority
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="">
+                  Partnerships and affiliations
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="">
+                  Performance and safeguarding
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="">
+                  Pupil numbers
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="">
+                  Religious education
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="">
+                  Stakeholders
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Give details of the trust
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="">
+                  Wise Owl Trust
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="submit-pay-status">In progress</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Governing body sign-off and completion
+          </h2>
+          <div class="govuk-inset-text govuk-!-margin-bottom-9">
+            This can only be done by the chair of the school’s governing body once the other sections are complete.
+          </div>
+        </li>
+
+      </ol>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Cancel this application
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>Other schools that are applying will not be affected.</p>
+          <a href="../cancel/are-you-sure-you-want-to-cancel" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Cancel application
+          </a>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-!-margin-left-4 govuk-!-margin-top-4">
+
+        <h2 class="govuk-heading-m">Recent activity</h2>
+        <p>Changes to the application by all contributors will appear here.</p>
+        <ul class="govuk-summary-list govuk-!-margin-bottom-4">
+          <li class="govuk-summary-list__row">
+            <h3 class="govuk-heading-s govuk-!-margin-top-4">4 Jan 2023, 12:17pm</h3>
+            <div class="govuk-body">Peter Parker changed Wise Owl Primary School's finances</div>
+          </li>
+          <li class="govuk-summary-list__row">
+            <h3 class="govuk-heading-s govuk-!-margin-top-4">2 Jan 2023, 11:06pm</h3>
+            <div class="govuk-body">Peter Parker changed Wise Owl Primary School's finances</div>
+          </li>
+          <li class="govuk-summary-list__row">
+            <h3 class="govuk-heading-s govuk-!-margin-top-4">1 Jan 2023, 9:33pm</h3>
+            <div class="govuk-body">Eve Farmer completed Wise Owl Primary School's Becoming an academy</div>
+          </li>
+        </ul>
+        <a href="#">See the full change history</a>
+      </aside>
+    
+    </div>
+
+
+  </div>
+
+{% endblock %}

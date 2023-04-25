@@ -1,0 +1,111 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "DfE Sign In",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Department for Education Sign-in
+      </h1>
+
+      <p>Sign-in to access DfE online services.</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s govuk-!-margin-top-3" for="contact-email">
+          Email address
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds govuk-!-margin-bottom-4" id="contact-email" name="contact-email" type="text" spellcheck="false">
+        <label class="govuk-label govuk-label--s" for="contact-password">
+          Password
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="contact-name" name="contact-password" type="password" spellcheck="false">
+        <p class="govuk-!-margin-top-1 govuk-body govuk-!-font-weight-bold"><a href="#">Forgotten your password?</a></p>     
+      </div>
+
+      <div class="govuk-inset-text">
+        By signing in you accept our <a class="govuk-!-font-weight-bold" href="#">terms and conditions</a>.
+      </div>
+
+      <div class="govuk-button-group">
+        
+        <a href="continue" class="govuk-button" data-module="govuk-button">
+          Sign in
+        </a>
+
+        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Create account
+        </a>
+
+      </div>
+
+      <details class="govuk-details" data-module="govuk-details" role="group">
+        <summary class="govuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="false">
+            <span class="govuk-details__summary-text">
+                Services accessed using DfE Sign-in
+            </span>
+        </summary>
+        <div class="govuk-details__text" id="details-content-0" aria-hidden="true">
+            <p class="govuk-body">
+                These DfE services are now accessed using your DfE Sign-in account.
+            </p>
+            <ol class="govuk-list govuk-list--bullet">
+              <li>Analyse school performance</li>
+              <li>Apply To Become An Academy</li>
+              <li>Assessment Service</li>
+              <li>Assessment Service - Develop an assessment</li>
+              <li>Assessment Service - Manage your school assessments</li>
+              <li>Assessment Service - Start an assessment</li>
+              <li>Child Safeguarding Incident Notification System</li>
+              <li>Claim additional payments for teaching</li>
+              <li>Collect</li>
+              <li>Document exchange</li>
+              <li>Get Information About Schools</li>
+              <li>Get help buying for schools</li>
+              <li>Get information about pupils</li>
+              <li>Get my Ofsted Inspection Data Summary Report</li>
+              <li>Hiring Supply Teachers and Agency Workers</li>
+              <li>Key to Success (LAs)</li>
+              <li>Key to Success (Schools)</li>
+              <li>Multiplication tables check</li>
+              <li>National non-domestic rates (NNDR) claims</li>
+              <li>Online Collections Service - including Risk Protection Arrangements</li>
+              <li>Publish to the course directory</li>
+              <li>Register Trainee Teachers</li>
+              <li>School Experience</li>
+              <li>School to School</li>
+              <li>T Level Results and Certification</li>
+              <li>T Levels - Connect with Employers</li>
+              <li>Teacher Services - Appropriate Body</li>
+              <li>Teacher Services - Employer Access - Agent</li>
+              <li>Teacher Services - Employer Access - Schools</li>
+              <li>Teacher Services - ITT Provider</li>
+              <li>Teaching Vacancies</li>
+              <li>View Your Education Data (VYED)</li>
+              <li>das-tool-service</li>    
+            </ol>
+          </div>
+      </details>
+
+      <p>If you are inactive for 20 minutes, your session will timeout.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

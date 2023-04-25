@@ -1,0 +1,32 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Application cancelled – {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      This application has been withdrawn
+    </h1>
+
+    <p>Your application was cancelled by Bob Smith.</p>
+    <p>To convert your school to an academy you must <a href="print">start a new application</a>.</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="#">read about converting to an academy</a></li>
+    </ul>
+  </div>
+</div>
+
+
+{% endblock %}

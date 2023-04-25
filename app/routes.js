@@ -3,7 +3,12 @@
 // https://prototype-kit.service.gov.uk/docs/routes
 // 
 
-const govukPrototypeKit = require('govuk-prototype-kit')
-const router = govukPrototypeKit.requests.setupRouter()
+const govukPrototypeKit = require("govuk-prototype-kit");
+const { resetState } = require("govuk-prototype-kit/lib/routes/api");
+const router = govukPrototypeKit.requests.setupRouter();
 
-// Add your routes here
+require("./routes/20/feedback.js")(router);
+require("./routes/20/multiple-applications.js")(router);
+
+require("./routes/22/create-an-application-v1.js")(router);
+require("./routes/22/create-an-application-v2.js")(router);
