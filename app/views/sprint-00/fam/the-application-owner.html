@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+<a href="#" onclick="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  The application owner
+</h1>
+
+ <p>Applications that involve more than one school must have a nominated ‘owner’.</p>
+
+<p>The owner will be responsible for:</p>
+
+<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+  <li>adding schools to the application</li>
+  <li>providing trust details or inviting somebody else to provide them</li>
+  <li>submitting the application once each school has given its details</li>
+</ul>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="">
+
+
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Who will be the owner of the application?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="who-will-be-the-owner-of-the-application-1" name="who-will-be-the-owner-of-the-application" type="radio" value="me">
+              <label class="govuk-label govuk-radios__label" for="contact-1">
+                Me
+              </label>
+            </div>
+    
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="who-will-be-the-owner-of-the-application-2" name="who-will-be-the-owner-of-the-application" type="radio" value="someone-else" data-aria-controls="conditional-1">
+              <label class="govuk-label govuk-radios__label" for="who-will-be-the-owner-of-the-application-2">
+                Someone else
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1">
+              <div class="govuk-form-group">
+                <p class="govuk-body">You will be the owner of this application until the person you nominate logs in. Afterwards, you will not be able to access this form until you have been invited.</p> 
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+
+
+
+
+
+
+      
+
+      <input type="hidden" name="add-a-school" value="no-school-added-yet" />
+      
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+          Your applications
+      </h1>
+      <form class="form" method="post">
+        <fieldset class="govuk-fieldset govuk-!-margin-bottom-6">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Continue an application
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            {% if data['fam'] %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="continue-an-application" name="continue-an-application" type="radio" value="fam" aria-describedby="continue-an-application-item-hint">
+              <label class="govuk-label govuk-radios__label" for="continue-an-application">
+                Clever Academies
+              </label> 
+              <div id="continue-an-application-item-hint" class="govuk-hint govuk-radios__hint">  
+                Application to form a new trust{% if data['add-to-fam'] %} with Montgomery Primary School{% endif %}
+              </div>
+            </div>
+            {% endif %}
+            {% if data['jam'] == 2 %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="continue-an-application-1" name="continue-an-application" type="radio" value="oak-park" aria-describedby="continue-an-application-item-hint">
+              <label class="govuk-label govuk-radios__label" for="continue-an-application-1">
+                Oak Park Primary School
+              </label> 
+              <div id="continue-an-application-item-hint" class="govuk-hint govuk-radios__hint">
+                Application to join Wise Owl Trust
+              </div>
+            </div>
+            {% endif %}
+            {% if data['jam'] > 0 %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="continue-an-application-2" name="continue-an-application" type="radio" value="wise-owl" aria-describedby="continue-an-application-item-hint">
+              <label class="govuk-label govuk-radios__label" for="continue-an-application-2">
+                Wise Owl Primary School
+              </label> 
+              <div id="continue-an-application-item-hint" class="govuk-hint govuk-radios__hint">
+                Application to join Wise Owl Trust
+              </div>
+            </div>
+            {% endif %}
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="continue-an-application-3" name="continue-an-application" type="radio" value="start-a-new-application">
+              <label class="govuk-label govuk-radios__label" for="continue-an-application-3">
+                Start a new application
+              </label>
+            </div>
+          </div>
+        </fieldset>  
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

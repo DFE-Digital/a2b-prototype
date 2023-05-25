@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8">
+    <title>
+  Home – Find information about academies and trusts
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/plugin-assets/govuk-frontend/govuk/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/plugin-assets/govuk-frontend/govuk/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
+      <link rel="apple-touch-icon" sizes="180x180" href="/plugin-assets/govuk-frontend/govuk/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/plugin-assets/govuk-frontend/govuk/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/plugin-assets/govuk-frontend/govuk/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/plugin-assets/govuk-frontend/govuk/assets/images/govuk-apple-touch-icon.png">
+    
+
+    
+  
+  
+  
+    <link href="/public/stylesheets/application.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  <link href="/public/css/accessible-autocomplete.min.css" rel="stylesheet" type="text/css" />
+
+
+
+    
+    
+  </head>
+  <body class="govuk-template__body version-3 fiat-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+
+    
+      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    
+
+    
+<header class="dfe-header" role="banner">
+  <div class="dfe-width-container dfe-header__container">
+     <div class="dfe-header__logo">
+        <a class="dfe-header__link dfe-header__link--service " href="./home" aria-label="Find information about academies and trusts homepage">
+        <img src="/public/images/dfe-logo.png" class="dfe-logo" alt="DfE logo">
+        <img src="/public/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="DfE logo"> 
+        <span class="dfe-header__service-name">
+          Find information about academies and trusts
+        </span>
+        </a>
+     </div>
+     <div class="dfe-header__content" id="content-header">
+        <div class="dfe-header__search">
+           <button class="dfe-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
+              <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                 <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+              </svg>
+              <span class="govuk-visually-hidden">Search</span>
+           </button>
+           <div class="dfe-header__search-wrap" id="wrap-search">
+              <form class="dfe-header__search-form" id="search" action="./search" method="post" role="search">
+                 <div class="fiat-autocomplete fiat-autocomplete--header">
+                   <label class="govuk-visually-hidden" for="header-search">Search for a trust</label>
+                   <div id="header-autocomplete-container" class="fiat-header-autocomplete__container"></div>
+                   <input type="hidden" id="header-uid" name="uid"/>
+                   <button class="dfe-search__submit" type="submit">
+                      <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                         <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                      </svg>
+                      <span class="govuk-visually-hidden">Search</span>
+                   </button>
+                 </div>
+                 <button class="dfe-search__close" id="close-search">
+                    <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                       <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+                    </svg>
+                    <span class="govuk-visually-hidden">Close search</span>
+                 </button>
+              </form>
+           </div>
+        </div>
+     </div>
+     
+  </div>
+</header>
+<div id="search-menu" class="fiat-banner fiat-banner--white" hidden>
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row ">
+      <div class="govuk-grid-column-two-thirds">
+        <form class="govuk-form-group" action="./search" method="post">
+          
+  <label class="govuk-label govuk-label--m" for="header-search">
+  Search for a trust by name or reference number
+</label>
+
+  <label class="govuk-hint">
+    Enter trust name, TRN, group ID or UID  
+    <a href="#name-reference-help" class="help-icon modal-link">
+      <span class="govuk-visually-hidden">Help with reference numbers</span>
+      <span class="govuk-visually-hidden">Opens a dialog</span>
+    </a>
+  </a>
+</label>
+<div class="govuk-input__wrapper govuk-!-margin-top-4 fiat-autocomplete fiat-autocomplete--home">
+  <div id="header-autocomplete-container"></div>
+  <input type="hidden" id="header-uid" name="uid"/>
+  <button class="govuk-button fiat-search-button" data-module="govuk-button" type="submit">
+    Search
+  </button>
+</div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+
+  <main id="main-content">
+    <div class="fiat-banner fiat-banner--l">
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row ">
+          <div class="govuk-grid-column-one-half">
+            <h1 class="govuk-heading-xl">Find information about academies and trusts</h1>
+              <form class="govuk-form-group" action="./search" method="post">
+                
+  <label class="govuk-label govuk-label--m" for="home-search">
+  Search for a trust by name or reference number
+</label>
+
+  <label class="govuk-hint">
+    Enter trust name, TRN, group ID or UID  
+    <a href="#name-reference-help" class="help-icon modal-link">
+      <span class="govuk-visually-hidden">Help with reference numbers</span>
+      <span class="govuk-visually-hidden">Opens a dialog</span>
+    </a>
+  </a>
+</label>
+<div class="govuk-input__wrapper govuk-!-margin-top-4 fiat-autocomplete fiat-autocomplete--home">
+  <div id="home-autocomplete-container"></div>
+  <input type="hidden" id="home-uid" name="uid"/>
+  <button class="govuk-button fiat-search-button" data-module="govuk-button" type="submit">
+    Search
+  </button>
+</div>
+
+              </form>
+          </div>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-width-container">
+      <section class="govuk-grid-row govuk-!-margin-top-9">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Related internal systems</h2>
+          <p class="govuk-body">Use these services to find related information and other services provided by the Department for Education (DfE):</p>
+          <dl class="fiat-grid-3">
+            <div class="fiat-card">
+              <dt class="fiat-heading-lite-m"><a href="#" class="govuk-link govuk-link--no-visited-state">Data and reporting tool (DaRT)</a></dt>
+              <dd class="govuk-body">Search to find and download information about schools, colleges, educational organisations and governors in England.</dd>
+            </div>
+            <div class="fiat-card">
+              <dt class="fiat-heading-lite-m"><a href="#" class="govuk-link govuk-link--no-visited-state">Knowledge Information Management (KIM)</a></dt>
+              <dd class="govuk-body">Search to find and download information about schools, colleges, educational organisations and governors in England.</dd>
+            </div>
+            <div class="fiat-card">
+              <dt class="fiat-heading-lite-m"><a href="#" class="govuk-link govuk-link--no-visited-state">Regions Group data tool</a></dt>
+              <dd class="govuk-body">Search to find and download information about schools, colleges, educational organisations and governors in England.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <section class="govuk-grid-row  govuk-!-margin-top-7 govuk-!-margin-bottom-6">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Related public facing services</h2>
+          <p class="govuk-body">Use these services to find related information and other services provided by the Department for Education (DfE):</p>
+          <dl class="fiat-grid-3">
+            <div class="fiat-card">
+              <dt class="fiat-heading-lite-m"><a href="#" class="govuk-link govuk-link--no-visited-state">Get information about schools</a></dt>
+              <dd class="govuk-body">Search to find and download information about schools, colleges, educational organisations and governors in England.</dd>
+            </div>
+            <div class="fiat-card">
+              <dt class="fiat-heading-lite-m"><a href="#" class="govuk-link govuk-link--no-visited-state">Ofsted - Find an inspection report</a></dt>
+              <dd class="govuk-body">You can find reports for schools, colleges, childminders, nurseries, children’s homes and more in England.</dd>
+            </div>
+            <div class="fiat-card">
+              <dt class="fiat-heading-lite-m"><a href="#" class="govuk-link govuk-link--no-visited-state">Statistics at DfE</a></dt>
+              <dd class="govuk-body">Find out more about latest news, announcements, forthcoming releases and ad hoc publications, as well as related education statistics.</dd>
+            </div>
+            <div class="fiat-card">
+              <dt class="fiat-heading-lite-m"><a href="#" class="govuk-link govuk-link--no-visited-state">Schools financial benchmarking</a></dt>
+              <dd class="govuk-body">Compare your school's income and expenditure with other schools in England.</dd>
+            </div>
+            <div class="fiat-card">
+              <dt class="fiat-heading-lite-m"><a href="#" class="govuk-link govuk-link--no-visited-state">Find and compare schools in England</a></dt>
+              <dd class="govuk-body">Search for and check the performance of primary, secondary and special needs schools and colleges.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <hr class="govuk-section-break govuk-section-break--visible">
+      <section class="govuk-grid-row govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-l">Contact us</h2>
+          <p class="govuk-body">The Trust and Academy Management Information Service is operated by the Department for Education (DfE).</p>
+          <p class="govuk-body">If you need help and support or have a question please contact:</p>
+          <h3 class="govuk-heading-s">Trust and Academy Management Information</h3>
+          <p class="govuk-body">Email <a href="mailto:TRAMS@education.gov.uk">TRAMS@education.gov.uk</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+    
+ <footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        
+          <h2 class="govuk-visually-hidden">Footer links</h2>
+          
+            <ul class="govuk-footer__inline-list">
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/">
+                    Prototype versions
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/manage-prototype">
+                    Manage your prototype
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/manage-prototype/clear-data">
+                    Clear data
+                  </a>
+                </li>
+              
+            </ul>
+          
+          
+        
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+              rel="license"
+            >Open Government Licence v3.0</a>, except where otherwise stated
+          
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    
+  
+
+  
+    
+  <script src="/plugin-assets/govuk-prototype-kit/lib/assets/javascripts/kit.js"></script>
+
+  <script src="/plugin-assets/govuk-prototype-kit/lib/assets/javascripts/auto-store-data.js"></script>
+
+  <script src="/plugin-assets/govuk-frontend/govuk/all.js"></script>
+
+  <script src="/plugin-assets/govuk-frontend/govuk-prototype-kit/init.js"></script>
+
+  <script src="/plugin-assets/%40ministryofjustice%2Ffrontend/moj/all.js"></script>
+
+  <script src="/plugin-assets/jquery/dist/jquery.js"></script>
+
+  <script src="/public/javascripts/application.js"></script>
+
+
+    
+  
+  <script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+  <script src="/public/javascripts/autocomplete.js"></script>
+  <script src="/public/javascripts/header-search.js"></script>
+  <script type="text/javascript">
+    autocomplete({
+      idPrefix: 'header',
+      formName: 'search',
+      valueName: 'uid',
+      path: '/trusts',
+      placeholder: 'Search for a trust',
+    })
+  </script>
+
+<script type="text/javascript">
+  autocomplete({
+    idPrefix: 'home',
+    formName: 'search',
+    valueName: 'uid',
+    path: '/trusts'
+  })
+
+</script>
+
+
+  </body>
+</html>
+

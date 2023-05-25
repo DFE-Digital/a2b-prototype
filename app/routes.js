@@ -7,8 +7,11 @@ const govukPrototypeKit = require("govuk-prototype-kit");
 const { resetState } = require("govuk-prototype-kit/lib/routes/api");
 const router = govukPrototypeKit.requests.setupRouter();
 
-require("./routes/20/feedback.js")(router);
-require("./routes/20/multiple-applications.js")(router);
 
-require("./routes/22/create-an-application-v1.js")(router);
-require("./routes/22/create-an-application-v2.js")(router);
+require("./routes/sprint-00/application-owner.js")(router);
+require("./routes/sprint-00/are-you-applying-to-convert-more-than-one-school.js")(router);
+require("./routes/sprint-00/create-an-application.js")(router);
+
+require("./routes/sprint-00/feedback.js")(router);
+require("./routes/sprint-00/multiple-applications.js")(router);
+

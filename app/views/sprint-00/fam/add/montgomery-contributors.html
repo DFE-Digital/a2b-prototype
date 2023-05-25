@@ -1,0 +1,133 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+<a href="#" onclick="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-xl">Montgomery Primary School</h1>
+
+    <h2 class="govuk-heading-l">Invite a contributor</h2>
+
+    <p>You can invite someone to help <s>you</s> complete this application by providing their email address and role.</p>
+    <p>If the person you invite doesn’t have a DfE Sign-in account, they will be asked to create one.</p>
+
+    {{ govukInput({
+      label: {
+        text: "What is the email address of the person you want to invite?",
+        classes: "govuk-label--s"
+      },
+      classes: "govuk-input--width-20",
+      id: "width-20",
+      name: "width-20"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "What is the person's name?",
+        classes: "govuk-label--s"
+      },
+      classes: "govuk-input--width-20",
+      id: "width-20",
+      name: "width-20"
+    }) }}
+
+    <h3 class="govuk-heading-s">What is this person's role?</h3>
+
+    {{ govukRadios({
+        name: "what-is-your-role",
+        items: [
+          {
+            value: "chair-of-governors",
+            text: "Chair of governors"
+          },
+          {
+            value: "headteacher",
+            text: "Headteacher"
+          },
+          {
+            value: "something-else",
+            text: "Something else",
+            conditional: {
+              html: somethingElseHtml
+            }
+          }
+        ]
+      }) }}
+
+      <button class="govuk-button" data-module="govuk-button">
+        Send invite
+      </button>
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-8">Current contributors</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-font-weight-regular">
+            Sarah Philips
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Headteacher
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-font-weight-regular">
+            John Doe
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Administrator
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-8">Pending contributors</h2>
+      <p>These people have been invited but not yet logged in</p>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-font-weight-regular">
+            Bob Jones
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Secretary
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+  </div>
+</div>
+{% endblock %}
