@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% set bodyClasses = "sprint-20" %}
+
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply to become an academy",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: '<a class="govuk-link" href="#">Get help or give feedback on this service (opens in a new tab) </a>'
+}) }}
+<a href="#" onclick="javascript:window.history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="" method="post" novalidate>
+      
+      {{ govukInput({
+        label: {
+          text: "Which trust will the school join?",
+          classes: "govuk-label--xl",
+          isPageHeading: true
+        },
+        id: "trust-name",
+        name: "trust-name",
+        value: "Wise Owl Trust"
+      }) }}
+        
+       <a href="is-this-the-correct-trust" class="govuk-button" data-module="govuk-button">Continue</a>
+
+    </form>
+  </div>
+</div>
+{% endblock %}
